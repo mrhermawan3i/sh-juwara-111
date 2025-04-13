@@ -17,7 +17,7 @@
 
 	<style>
 		/* From Uiverse.io by Yaya12085 */
-		button {
+		#wa-button {
 			position: fixed;
 			bottom: 20px;
 			left: 20px;
@@ -41,17 +41,17 @@
 			transition: all 0.6s ease;
 		}
 
-		/* button:hover {
-			box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
-		} */
+		#wa-button:hover {
+			box-shadow: 0 10px 15px -3px #48ec9f4f, 0 4px 6px -2px #48ec9f17;
+		}
 
-		button:focus,
-		button:active {
+		#wa-button:focus,
+		#wa-button:active {
 			opacity: 0.85;
 			box-shadow: none;
 		}
 
-		button svg {
+		#wa-button svg {
 			width: 1.25rem;
 			height: 1.25rem;
 		}
@@ -92,6 +92,7 @@
 				<div class="logo"><span class="icon fa-gem"></span></div>
 				<h2>Bisnis 111 Kopi SH Juwara</h2>
 				<p>Minum, Ajak, Konsisten! Sukses Bareng Kopi SH Juwara Cafe dengan 1 Kotak/Bulan, 1 Teman/Bulan, dan Raih Rp36 Juta/Bulan!</p>
+				<button class="button primary" onclick="goToWhatsapp()">DAFTAR SEKARANG</button>
 			</div>
 		</section>
 
@@ -321,8 +322,12 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
+		function goToWhatsapp() {
+			window.location.href = 'https://wa.me/6285283001487';
+		}
+		
 		document.getElementById('wa-button').addEventListener('click', function() {
-		  window.location.href = 'https://wa.me/6285283001487';
+		  goToWhatsapp();
 		});
 	</script>
 
