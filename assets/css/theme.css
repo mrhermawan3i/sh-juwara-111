@@ -22912,6 +22912,7 @@ a:hover, a:focus {
 
 .terms-condition .overley-background {
   position: absolute;
+  pointer-events: none;
   background: rgba(0, 0, 0, 0.33);
   left: 0%;
   top: 0%;
@@ -22951,6 +22952,7 @@ a:hover, a:focus {
 
 .terms-condition .overley-background {
   position: absolute;
+  pointer-events: none;
   background: rgba(0, 0, 0, 0.33);
   left: 0%;
   top: 0%;
