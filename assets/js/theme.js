@@ -488,6 +488,8 @@ var scrollToTopInit = function scrollToTopInit() {
   var btn = document.querySelector('[data-scroll-top]');
   let floatingBtn = document.getElementById('floating-button');
 
+  floatingBtn.style.display = 'none';
+
   if (btn) {
     btn.style.display = 'none';
     // eslint-disable-next-line func-names
