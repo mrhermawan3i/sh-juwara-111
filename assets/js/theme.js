@@ -486,14 +486,18 @@ var navbarInit = function navbarInit() {
 
 var scrollToTopInit = function scrollToTopInit() {
   var btn = document.querySelector('[data-scroll-top]');
+  let floatingBtn = document.getElementById('floating-button');
+
   if (btn) {
     btn.style.display = 'none';
     // eslint-disable-next-line func-names
     window.onscroll = function () {
       if (window.scrollY > 550) {
         btn.style.display = 'block';
+        floatingBtn.style.display = 'flex';
       } else {
         btn.style.display = 'none';
+        floatingBtn.style.display = 'none';
       }
     };
     btn.addEventListener('click', function () {

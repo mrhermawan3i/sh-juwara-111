@@ -1,0 +1,79 @@
+:root {
+    --base-offset: 2%;        /* same percentage for both */
+    --scroll-width: 40px;     /* width of scroll-to-top */
+    --gap: 10px;              /* desired constant gap */
+}
+
+#floating-button {
+    position: fixed;
+    right: calc(var(--base-offset) + var(--scroll-width) + var(--gap));
+    bottom: 4.95%;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+    /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); */
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background: -o-linear-gradient(357deg, #85C7B3 -18.71%, #265c4cce 117.68%);
+    background: linear-gradient(93deg, #85C7B3 -18.71%, #265c4cce 117.68%);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+#floating-button:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+}
+
+#floating-button:hover .icon {
+    transform: translate(4px);
+}
+
+#floating-button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+}
+
+#floating-button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0) 70%);
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+}
+
+@keyframes shine {
+    0% {
+        left: -100px;
+    }
+
+    60% {
+        left: 100%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
